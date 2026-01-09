@@ -1,7 +1,29 @@
-/* Global variables.  */
-
-/* Basic variable definitions for color schemes */
+/* Global variables - Custom 5-color theme */
+/* Base color definitions */
 :root {
+  /* Your 5 colors */
+  --color-gray-900: #0d0a0bff; /* onyx */
+  --color-gray-700: #454955ff; /* charcoal-blue */
+  --color-gray-100: #f3eff5ff; /* lavender-mist */
+  --color-green-bright: #72b01dff; /* lime-moss */
+  --color-green-dark: #3f7d20ff; /* green */
+  
+  /* Derived intermediate grays */
+  --color-gray-800: #232126;
+  --color-gray-600: #5d5f69;
+  --color-gray-400: #9a98a1;
+  --color-gray-300: #c6c4cb;
+  --color-gray-200: #e2e0e5;
+  
+  /* Accent color assignments */
+  --color-primary: var(--color-green-bright);
+  --color-secondary: var(--color-gray-700);
+  --color-tertiary: var(--color-green-dark);
+  --color-primary-subdued: var(--color-green-dark);
+  --color-secondary-subdued: #5d5f69;
+  --color-tertiary-subdued: #558526;
+  
+  /* Layout variables */
   --gutter: var(--space-m-l);
   --transition-duration: 250ms;
   --transition-timing: ease;
@@ -10,7 +32,8 @@
   --tracking-s: -0.075ch;
   --tracking-wide: 0.04ch;
   --stroke: 1px solid var(--color-bg-accent);
-
+  
+  /* Gradients */
   --gradient-rainbow: linear-gradient(90deg, #cf4662 10%, #fbbe25 30%, #62c95c 50%, #08bccb 75%, #a977d5 90%);
   --gradient-conic: conic-gradient(
     var(--color-primary) 0 28%,
@@ -24,7 +47,8 @@
     var(--color-secondary) 0 92%,
     var(--color-tertiary) 0 100%
   );
-
+  
+  /* Semantic color names */
   --color-light: var(--color-gray-100);
   --color-dark: var(--color-gray-900);
   --color-mid: var(--color-gray-400);
@@ -35,11 +59,9 @@
 :root[data-theme='light'] {
   --color-text: var(--color-gray-800);
   --color-bg: var(--color-gray-100);
-
-  --color-primary: var(--color-pink);
-  --color-secondary: var(--color-blue);
-  --color-tertiary: var(--color-gold);
-
+  --color-primary: var(--color-green-bright);
+  --color-secondary: var(--color-gray-700);
+  --color-tertiary: var(--color-green-dark);
   --color-text-accent: var(--color-gray-700);
   --color-bg-accent: var(--color-gray-200);
   --color-bg-accent-2: var(--color-gray-300);
@@ -50,24 +72,21 @@
   :root {
     --color-text: var(--color-gray-100);
     --color-bg: var(--color-gray-800);
-
-    --color-primary: var(--color-pink-subdued);
-    --color-secondary: var(--color-blue-subdued);
-    --color-tertiary: var(--color-gold-subdued);
-
+    --color-primary: var(--color-green-dark);
+    --color-secondary: var(--color-gray-600);
+    --color-tertiary: var(--color-green-bright);
     --color-text-accent: var(--color-gray-300);
     --color-bg-accent: var(--color-gray-700);
     --color-bg-accent-2: var(--color-gray-600);
   }
 }
+
 :root[data-theme='dark'] {
   --color-text: var(--color-gray-100);
   --color-bg: var(--color-gray-800);
-
-  --color-primary: var(--color-pink-subdued);
-  --color-secondary: var(--color-blue-subdued);
-  --color-tertiary: var(--color-gold-subdued);
-
+  --color-primary: var(--color-green-dark);
+  --color-secondary: var(--color-gray-600);
+  --color-tertiary: var(--color-green-bright);
   --color-text-accent: var(--color-gray-300);
   --color-bg-accent: var(--color-gray-700);
   --color-bg-accent-2: var(--color-gray-600);
