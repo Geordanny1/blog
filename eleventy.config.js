@@ -20,6 +20,7 @@ import events from './src/_config/events.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
+import markdownItKatex from '@traptitech/markdown-it-katex';
 
 export default async function (eleventyConfig) {
   // --------------------- Events: before build
@@ -75,6 +76,7 @@ export default async function (eleventyConfig) {
   // 	--------------------- Library and Data
   eleventyConfig.setLibrary('md', plugins.markdownLib);
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
+  eleventyConfig.amendLibrary('md', mdLib => mdLib.use(markdownItKatex));
 
   // --------------------- Filters
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
