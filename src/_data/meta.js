@@ -1,7 +1,7 @@
 export const url = process.env.URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'Geordanny\'s notebook';
+export const siteName = "Geordanny's notebook";
 export const siteDescription = 'The website of someone who likes computers';
 export const siteType = 'Person'; // schema
 export const locale = 'en_EN';
@@ -11,12 +11,12 @@ export const author = {
   name: 'Geordanny', // i.e. Lene Saile - page / blog author's name. Must be set.
   avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
   email: 'geordanipinales@gmail.com', // i.e. hola@lenesaile.com - email of the author
-  website: 'https://www.geordanny.me', // i.e. https.://www.lenesaile.com - the personal site of the author
+  website: 'https://geordanny-blog.netlify.app/', // i.e. https.://www.lenesaile.com - the personal site of the author
   fediverse: '@geordanny@mastodon.social'
 };
 export const creator = {
   name: 'Geordanny', // i.e. Lene Saile - creator's (developer) name.
-  website: 'https://www.geordanny.me',
+  website: 'https://geordanny-blog.netlify.app/',
   email: 'geordanipinales@gmail.com',
   social: 'https://mastodon.social/@geordanny'
 };
@@ -30,7 +30,7 @@ export const opengraph_default_alt =
 export const blog = {
   name: 'My personal blog',
   // RSS feed
-description: 'I will share about my tech journey and college experiences',
+  description: 'I will share about my tech journey and college experiences',
   // feed links are looped over in the head. You may add more to the array.
   feedLinks: [
     {
